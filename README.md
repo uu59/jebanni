@@ -1,6 +1,6 @@
 # Jebanni
 
-TODO: Write a gem description
+Jebanni is a Sinatra-style Server-Sent Event kit its based on [Reel](https://github.com/celluloid/reel).
 
 ## Installation
 
@@ -18,7 +18,30 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+class App < Jebanni::Base
+  set :interval, 1
+  set :port, 63123
+
+  get "/:channel_id" do
+    on_first_connect do
+      every(settings[:interval]) do
+        broadcast(Time.now)
+      end
+    end
+  end
+end
+
+App.run
+```
+
+See <./example/> directory for more examples.
+
+## Thanks
+
+Jebanni is heavyly inspired by [Angelo](https://github.com/kenichi/angelo).
+
+If you looking for WebSocket stream server, try it!
 
 ## Contributing
 
