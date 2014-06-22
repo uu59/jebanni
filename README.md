@@ -35,7 +35,7 @@ end
 App.run
 ```
 
-See <./example/> directory for more examples.
+See [example](./example/) directory for more examples.
 
 ## Thanks
 
