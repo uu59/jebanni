@@ -39,7 +39,7 @@ See [example](./example/) directory for more examples.
 
 ## Thanks
 
-Jebanni is heavyly inspired by [Angelo](https://github.com/kenichi/angelo).
+Jebanni is heavily inspired by [Angelo](https://github.com/kenichi/angelo).
 
 If you looking for WebSocket stream server, try it!
 
